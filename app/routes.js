@@ -18,11 +18,18 @@ router.post('/e-one/your-contact-channels', function (req, res) {
   }
 
   else if (contactChannel === 'dss-signin') {
-    res.redirect('/e-one/sign-in')
+    res.redirect('/e-one/benefit-summary')
   }
 
   else if (contactChannel === 'chat-bots') {
     res.redirect('/e-one/webchat-service')
   }
+
+    else if (contactChannel === 'yes-i-found-info') {
+      res.redirect('/e-one/start')
+    }
+    else if (contactChannel === 'telephone-end') {
+      res.redirect('/e-one/telephone-information-end')
+    }
 
 })

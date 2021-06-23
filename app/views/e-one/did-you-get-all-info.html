@@ -8,41 +8,53 @@
 
 
 {% block content %}
+
+
+<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      You have been signed out of Digital self-service hub
+    </h3>
+  </div>
+</div>
+
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+
+
     <form class="form" action="/e-one/your-contact-channels" method="post">
       <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
 
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                   <h1 class="govuk-fieldset__heading">
-                    How do you want to find out about your benefits?
+                    Did you find all the information you are looking for?
                   </h1>
             </legend>
 
-            <div id="sign-in-hint" class="govuk-inset-text">
-              You may have to prove your identity before you access some information.
-            </div>
+
             <hr class="govuk-section-break govuk-section-break--l govuk-section-break--hidden">
 
             <div class="govuk-radios">
               <div class="govuk-radios__item govuk-!-padding-bottom-3">
-                <input class="govuk-radios__input" id="contact-channel-2" name="contact-channel" type="radio" value="dss-signin" aria-describedby="contact-channel-2-item-hint">
+                <input class="govuk-radios__input" id="contact-channel-2" name="contact-channel" type="radio" value="yes-i-found-info" aria-describedby="contact-channel-2-item-hint">
                 <label class="govuk-label govuk-radios__label" for="contact-channel-2">
-                  Log in to the online DWP self-service hub
+                  Yes, I found the details I was looking for
                 </label>
-                <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                  You’ll have an account if you’ve already proved your identity with DWP.
-                </div>
+
               </div>
               <div class="govuk-radios__item govuk-!-padding-bottom-3">
-                <input class="govuk-radios__input" id="contact-channel" name="contact-channel" type="radio" value="telephone" aria-describedby="contact-channel-item-hint">
+                <input class="govuk-radios__input" id="contact-channel" name="contact-channel" type="radio" value="telephone-end" aria-describedby="contact-channel-item-hint">
                 <label class="govuk-label govuk-radios__label" for="contact-channel">
-                  Talk to an adviser over a phone call
+                  No, I need to talk to an adviser over a phone call
                 </label>
-                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                  You will have to phone each benefit line individually if you get more than one benefit.
-                </div>
+
               </div>
 
               <!-- <div class="govuk-radios__item govuk-!-padding-bottom-3">
