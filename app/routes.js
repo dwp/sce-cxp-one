@@ -25,11 +25,29 @@ router.post('/e-one/your-contact-channels', function (req, res) {
     res.redirect('/e-one/webchat-service')
   }
 
-    else if (contactChannel === 'yes-i-found-info') {
-      res.redirect('/e-one/start')
+    else if (contactChannel === 'no-i-did-not-found-info') {
+      res.redirect('/e-one/did-you-get-all-info-no')
     }
-    else if (contactChannel === 'telephone-end') {
-      res.redirect('/e-one/telephone-information-end')
+    else if (contactChannel === 'no-i-do-not') {
+      res.redirect('/e-one/thank-you-close')
     }
+
+})
+
+router.post('/e-one/contact-channels', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const contactChannel = req.session.data['contact']
+
+  if (contactChannel === 'webchat') {
+    res.redirect('/e-one/webchat-service')
+  }
+
+  else  {
+    res.redirect('/e-one/thank-you')
+  }
+
 
 })
