@@ -123,6 +123,9 @@ router.post('/e-three/find-info', function (req, res) {
   else if (contactChannel === 'ca-service') {
       res.redirect('/e-three/digital-service-3/start')
   }
+  else if (contactChannel === 'govuk') {
+    res.redirect('https://www.gov.uk/')
+  }
 
 })
 
