@@ -110,7 +110,7 @@ router.post('/e-three/find-info', function (req, res) {
   }
 
   else if (contactChannel === 'pip-service') {
-    res.redirect('/e-three/b2-info')
+    res.redirect('https://www.gov.uk/browse/benefits')
   }
 
   else if (contactChannel === 'local-authority') {
