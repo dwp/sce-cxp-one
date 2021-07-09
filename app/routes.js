@@ -98,3 +98,130 @@ router.post('/e-two/contact-channels', function (req, res) {
 
 
 })
+
+// Branching Experiement 3 Find-Information
+router.post('/e-three/find-info', function (req, res) {
+
+
+  const contactChannel = req.session.data['contact-channel']
+
+  if (contactChannel === 'esa-service') {
+    res.redirect('/e-three/digital-service/start')
+  }
+
+  else if (contactChannel === 'pip-service') {
+    res.redirect('/e-three/b2-info')
+  }
+
+  else if (contactChannel === 'local-authority') {
+    res.redirect('https://www.gov.uk/find-local-council')
+  }
+
+  else if (contactChannel === 'adviser') {
+      res.redirect('/e-three/telephone-information')
+  }
+  else if (contactChannel === 'ca-service') {
+      res.redirect('/e-three/digital-service-3/start')
+  }
+
+})
+
+// Branching Experiement 3 b1-Information
+router.post('/e-three/b1-information', function (req, res) {
+
+
+  const infoNeed = req.session.data['info-need']
+
+  if (infoNeed === 'loe') {
+    res.redirect('/e-three/digital-service/b1-loe')
+  }
+
+  else if (infoNeed === 'payment-info') {
+    res.redirect('/e-three/digital-service/payments')
+  }
+
+  else if (infoNeed === 'status') {
+    res.redirect('/e-three/digital-service/b1-status')
+  }
+
+  else if (infoNeed === 'adviser') {
+      res.redirect('/e-three/digital-service/telephone-information')
+  }
+
+})
+
+// Branching Experiement 3 b1-Information
+router.post('/e-three/more-info-need', function (req, res) {
+
+
+  const infoNeed = req.session.data['more-info-need']
+
+  if (infoNeed === 'yes') {
+    res.redirect('/e-three/digital-service/b1-information')
+  }
+
+  else if (infoNeed === 'no') {
+    res.redirect('/e-three/digital-service/thank-you')
+  }
+
+
+})
+
+// Branching Experiement 3 b2-info
+router.post('/e-three/b2-info', function (req, res) {
+
+
+  const infoNeed = req.session.data['search-channel']
+
+  if (infoNeed === 'google') {
+    res.redirect('https://google.com')
+  }
+
+  else if (infoNeed === 'govuk') {
+    res.redirect('https://www.gov.uk/browse/benefits')
+  }
+
+
+})
+
+// Branching Experiement 3 b2-Information
+router.post('/e-three/b3-information', function (req, res) {
+
+
+  const infoNeed = req.session.data['info-need']
+
+  if (infoNeed === 'loe') {
+    res.redirect('/e-three/digital-service/b3-loe')
+  }
+
+  else if (infoNeed === 'payment-info') {
+    res.redirect('/e-three/digital-service/payments')
+  }
+
+  else if (infoNeed === 'status') {
+    res.redirect('/e-three/digital-service/b3-status')
+  }
+
+  else if (infoNeed === 'adviser') {
+      res.redirect('/e-three/digital-service/telephone-information')
+  }
+
+})
+
+
+// Branching Experiement 3 b1-Information
+router.post('/e-three/more-info-need-ca', function (req, res) {
+
+
+  const infoNeed = req.session.data['more-info-need']
+
+  if (infoNeed === 'yes') {
+    res.redirect('/e-three/digital-service-3/b3-information')
+  }
+
+  else if (infoNeed === 'no') {
+    res.redirect('/e-three/digital-service-3/thank-you')
+  }
+
+
+})

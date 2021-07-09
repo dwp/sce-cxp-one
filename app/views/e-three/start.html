@@ -1,0 +1,38 @@
+{% extends "header-e-three.html" %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start session
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        What we want you to do today
+      </h1>
+
+            <form class="form" action="scenario" method="post">
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>You will asked to go through a scenrio</li>
+                <li>Please think out loud what you are thinkin</li>
+                <li>Your feeback are anonymous</li>
+              </ul>
+              <p></p>
+
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--hidden">
+
+              <button class="govuk-button" data-module="govuk-button">View scenario</button>
+
+            </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}
