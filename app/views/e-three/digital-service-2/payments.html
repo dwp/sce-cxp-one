@@ -1,4 +1,4 @@
-{% extends "header-e-three-digital-service-3.html" %}
+{% extends "header-e-three-digital-service-2.html" %}
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -22,7 +22,7 @@
 </div>
 
 <br>
-<a class="govuk-back-link" href="b3-information">Back</a>
+<a class="govuk-back-link" href="b2-information">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -32,7 +32,7 @@
 <div class="govuk-grid-row">
 
 <div class="govuk-grid-column-full">
-  <p class="govuk-body-m">Your national insurance number: <br><strong><bold>{{ data['national-insurance-number'] }}</bold></strong>&nbsp;&nbsp;<a href="ni-number">Change</a></p>
+  <!-- <p class="govuk-body-m">Your national insurance number: <br><strong><bold>{{ data['national-insurance-number'] }}</bold></strong>&nbsp;&nbsp;<a href="ni-number">Change</a></p> -->
   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
 
           <h1 class="govuk-heading-xl">
@@ -63,17 +63,21 @@
       <tbody class="govuk-table__body">
 
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell ">£22.96</td>
-          <td class="govuk-table__cell ">Every 2 weeks</td>
-          <td class="govuk-table__cell" >29 May 2021</td>
-          <td class="govuk-table__header ">19 June 2021</td>
+          <td class="govuk-table__cell ">£128.50</td>
+          <td class="govuk-table__cell ">12 of the month</td>
+          <td class="govuk-table__cell" >29 June 2021</td>
+          <td class="govuk-table__header ">30 July 2021</td>
         </tr>
 
       </tbody>
 
     </table>
 
+    <p> Your next payment is estimated to be <strong>£123.24</strong> and wil be made on the <strong>30 July 2021.</strong></p>
+    <div class="govuk-inset-text">
 
+    <p>If you need any more information or know why your payment amount & date are different to the award, please contact <a href="telephone-information">DWP - PIP Claims</a>. Call charges may apply.</p>
+  </div>
 
 <br>
     <details class="govuk-details" data-module="govuk-details">
@@ -118,7 +122,7 @@ You can find <a href="https://www.gov.uk/browse/benefits">help and information a
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--hidden">
 
     <h1 class="govuk-heading-l">
-    Payment history
+    Recent Payments
     <span class="govuk-caption-m">
     10 payments made to you
     </span>
@@ -134,44 +138,44 @@ You can find <a href="https://www.gov.uk/browse/benefits">help and information a
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell  ">£22.96</td>
+          <td class="govuk-table__cell  ">£123.43</td>
           <td class="govuk-table__cell  ">Paid</td>
-          <td class="govuk-table__cell  ">29 May 2021</td>
+          <td class="govuk-table__cell  ">29 June 2021</td>
         </tr>
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell  ">£22.96</td>
+          <td class="govuk-table__cell  ">£123.43</td>
           <td class="govuk-table__cell  ">Paid</td>
-          <td class="govuk-table__cell  ">25 May 2021</td>
+          <td class="govuk-table__cell  ">12 May 2021</td>
         </tr>
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell  ">£22.96</td>
-          <td class="govuk-table__cell  ">Paid</td>
-          <td class="govuk-table__cell  ">17 May 2021</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell  ">£22.96</td>
-          <td class="govuk-table__cell  ">Paid</td>
-          <td class="govuk-table__cell  ">29 April 2021</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell  ">£22.96</td>
-          <td class="govuk-table__cell  ">Paid</td>
-          <td class="govuk-table__cell  ">25 April 2021</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell  ">£22.96</td>
+          <td class="govuk-table__cell  ">£123.43</td>
           <td class="govuk-table__cell  ">Paid</td>
           <td class="govuk-table__cell  ">17 April 2021</td>
         </tr>
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell  ">£22.96</td>
+          <td class="govuk-table__cell  ">£128.50</td>
           <td class="govuk-table__cell  ">Paid</td>
           <td class="govuk-table__cell  ">29 March 2021</td>
         </tr>
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell  ">£22.96</td>
+          <td class="govuk-table__cell  ">£128.50</td>
           <td class="govuk-table__cell  ">Paid</td>
-          <td class="govuk-table__cell  ">25 March 2021</td>
+          <td class="govuk-table__cell  ">25 Febuary 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell  ">£128.50</td>
+          <td class="govuk-table__cell  ">Paid</td>
+          <td class="govuk-table__cell  ">17 January 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell  ">£128.50</td>
+          <td class="govuk-table__cell  ">Paid</td>
+          <td class="govuk-table__cell  ">12 December 2020</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell  ">£122.43</td>
+          <td class="govuk-table__cell  ">Paid</td>
+          <td class="govuk-table__cell  ">12 November 2020</td>
         </tr>
 
 
@@ -181,28 +185,6 @@ You can find <a href="https://www.gov.uk/browse/benefits">help and information a
 
 
 
-    <!-- Help and support
-        <div class="govuk-grid-column-full" style="padding-left:0px;">
-
-          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--hidden">
-          <p class="govuk-heading-l">I need more help</p>
-          <ul class="govuk-list">
-            <li>
-              <a class="govuk-link" href="ask-question">Ask a question</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="telephone-information">Talk to an adviser over a phone call</a>
-            </li>
-
-            <li>
-              <a class="govuk-link" href="webchat-service">Use webchat service</a>
-
-            </li>
-          </ul>
-
-        </div>
--->
-
 
 
     </div>
@@ -211,46 +193,5 @@ You can find <a href="https://www.gov.uk/browse/benefits">help and information a
   </div>
 
 
-  <!-- information -->
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/e-three/more-info-need-ca" method="post">
-        <div class="govuk-form-group">
-
-          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--hidden">
-
-            <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                    <h1 class="govuk-fieldset__heading">
-                      Do you want to view any other DLA related information?
-                    </h1>
-              </legend>
-              <br>
-              <div class="govuk-radios govuk-radios--inline">
-                <div class="govuk-radios__item govuk-!-padding-bottom-3">
-                  <input class="govuk-radios__input" id="info-need-2" name="more-info-need" type="radio" value="yes" aria-describedby="info-need-2-item-hint">
-                  <label class="govuk-label govuk-radios__label" for="more-info-need-2">
-                    Yes
-                  </label>
-
-                </div>
-
-                <div class="govuk-radios__item govuk-!-padding-bottom-3">
-                  <input class="govuk-radios__input" id="info-need" name="more-info-need" type="radio" value="no" aria-describedby="info-need-item-hint">
-                  <label class="govuk-label govuk-radios__label" for="more-info-need">
-                    No
-                  </label>
-
-                </div>
-
-
-            </fieldset>
-        </div>
-
-
-          <button class="govuk-button" data-module="govuk-button">Select and continue</button>
-      </form>
-    </div>
-  </div>
 
 {% endblock %}

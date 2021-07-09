@@ -110,17 +110,17 @@ router.post('/e-three/find-info', function (req, res) {
   }
 
   else if (contactChannel === 'pip-service') {
-    res.redirect('https://www.gov.uk/browse/benefits')
+    res.redirect('/e-three/digital-service-2/start')
   }
 
   else if (contactChannel === 'local-authority') {
-    res.redirect('https://www.gov.uk/find-local-council')
+    res.redirect('https://www.gov.uk/housing-benefit')
   }
 
   else if (contactChannel === 'adviser') {
       res.redirect('/e-three/telephone-information')
   }
-  else if (contactChannel === 'ca-service') {
+  else if (contactChannel === 'dla-service') {
       res.redirect('/e-three/digital-service-3/start')
   }
   else if (contactChannel === 'govuk') {
@@ -224,6 +224,54 @@ router.post('/e-three/more-info-need-ca', function (req, res) {
 
   else if (infoNeed === 'no') {
     res.redirect('/e-three/digital-service-3/thank-you')
+  }
+
+
+})
+
+
+// Branching Experiement 3 V2 Information-channels
+router.post('/e-three/information-channels', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const contactChannel = req.session.data['contact-channel']
+
+  if (contactChannel === 'telephone') {
+    res.redirect('/e-three/concept-2/telephone-information')
+  }
+
+  else if (contactChannel === 'dss-signin') {
+    res.redirect('/e-three/concept-2/ni-number')
+  }
+
+  else if (contactChannel === 'chat-bots') {
+    res.redirect('/e-three/concept-2/webchat-service')
+  }
+
+    else if (contactChannel === 'no-i-did-not-found-info') {
+      res.redirect('/e-three/concept-2/did-you-get-all-info-no')
+    }
+    else if (contactChannel === 'no-i-do-not') {
+      res.redirect('/e-three/concept-2/thank-you-close')
+    }
+
+})
+
+router.post('/e-three/contact-channels', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const contactChannel = req.session.data['contact']
+
+  if (contactChannel === 'webchat') {
+    res.redirect('/e-three/concept-2/webchat-service')
+  }
+
+  else  {
+    res.redirect('/e-three/concept-2/thank-you')
   }
 
 

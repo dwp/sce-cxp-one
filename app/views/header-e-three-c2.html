@@ -17,16 +17,29 @@
         </span>
       </a>
     </div>
-
     <div class="govuk-header__content">
-      <a href="/e-three/digital-service/start" class="govuk-header__link govuk-header__link--service-name">
-        Employment and Support Allowance (ESA)
+      <a href="/" class="govuk-header__link govuk-header__link--service-name">
+        Find out about my DWP benefits
       </a>
-
     </div>
-
-
   </div>
 </header>
 
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Prototype
+    </strong> &nbsp;
+    <strong class="govuk-tag govuk-tag--red">
+      Experimental
+    </strong> &nbsp;
+    <span class="govuk-phase-banner__text">
+      This is not a service. These are example conceptual screens.
+    </span>
+  </p>
+</div>
+<br>
 {% endblock %}

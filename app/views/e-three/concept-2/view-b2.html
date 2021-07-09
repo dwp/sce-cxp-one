@@ -1,4 +1,4 @@
-{% extends "header-e-three-digital-service.html" %}
+{% extends "header-e-three-c2.html" %}
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -24,7 +24,7 @@ Proof of entitlement
 
 
 <br>
-<a class="govuk-back-link" href="b1-information">Back</a>
+<a class="govuk-back-link" href="benefit-summary">Back</a>
 
 
 {% endblock %}
@@ -32,13 +32,9 @@ Proof of entitlement
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full proof-heading">
-    <p class="govuk-body-m">Your national insurance number: <br><strong><bold>{{ data['national-insurance-number'] }}</bold></strong>&nbsp;&nbsp;<a href="ni-number">Change</a></p>
-
-    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-4">
       Letter of entitlement
     </h1>
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-
     <a href="loe-w-exit" class="proof-heading__action govuk-link--no-visited-state"><i class="mdi mdi-36px mdi-fullscreen"></i><span class="govuk-visually-hidden">Full screen view</span></a>
   </div>
   <div class="letter">
@@ -77,11 +73,11 @@ Proof of entitlement
 
 
 
-    <p class="govuk-!-margin-bottom-1"><strong>Employment and Support Allowance (ESA)</strong></p>
+    <p class="govuk-!-margin-bottom-1"><strong>Disability Living Allowance(DLA)</strong></p>
 
     <p class="govuk-!-margin-bottom-1">Entitlement start date: Thu 24 March 2021.</p>
 
-    <p>Amount: £22.96, paid every 2 weeks.</p>
+    <p>Amount: £22.96, paid monthly.</p>
 
     <h3 class="govuk-heading-s govuk-!-margin-bottom-1">More information</h3>
 
@@ -122,53 +118,9 @@ Proof of entitlement
         </ul>
       </aside>
     </div>
-
-
-  </div>
-
-</div>
-
-<!-- information -->
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <form class="form" action="/e-three/more-info-need" method="post">
-      <div class="govuk-form-group">
-
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--hidden">
-
-          <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    Do you want to view any other ESA related information?
-                  </h1>
-            </legend>
-            <br>
-            <div class="govuk-radios govuk-radios--inline">
-              <div class="govuk-radios__item govuk-!-padding-bottom-3">
-                <input class="govuk-radios__input" id="info-need-2" name="more-info-need" type="radio" value="yes" aria-describedby="info-need-2-item-hint">
-                <label class="govuk-label govuk-radios__label" for="more-info-need-2">
-                  Yes
-                </label>
-
-              </div>
-
-              <div class="govuk-radios__item govuk-!-padding-bottom-3">
-                <input class="govuk-radios__input" id="info-need" name="more-info-need" type="radio" value="no" aria-describedby="info-need-item-hint">
-                <label class="govuk-label govuk-radios__label" for="more-info-need">
-                  No
-                </label>
-
-              </div>
-
-
-          </fieldset>
-      </div>
-
-
-        <button class="govuk-button" data-module="govuk-button">Select and continue</button>
-    </form>
   </div>
 </div>
+
 
 
 
