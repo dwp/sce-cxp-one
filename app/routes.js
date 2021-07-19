@@ -259,6 +259,7 @@ router.post('/e-three/information-channels', function (req, res) {
 
 })
 
+
 router.post('/e-three/contact-channels', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
@@ -272,6 +273,58 @@ router.post('/e-three/contact-channels', function (req, res) {
 
   else  {
     res.redirect('/e-three/concept-2/thank-you')
+  }
+
+
+})
+
+
+// Branching V4
+
+
+// Branching Experiement 3 V2 Information-channels
+router.post('/e-four/information-channels', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const contactChannel = req.session.data['contact-channel']
+
+  if (contactChannel === 'telephone') {
+    res.redirect('/e-four/concept-2/telephone-information')
+  }
+
+  else if (contactChannel === 'dss-signin') {
+    res.redirect('/e-four/concept-2/ni-number')
+  }
+
+  else if (contactChannel === 'chat-bots') {
+    res.redirect('/e-four/concept-2/webchat-service')
+  }
+
+    else if (contactChannel === 'no-i-did-not-found-info') {
+      res.redirect('/e-four/concept-2/did-you-get-all-info-no')
+    }
+    else if (contactChannel === 'no-i-do-not') {
+      res.redirect('/e-four/concept-2/thank-you-close')
+    }
+
+})
+
+
+router.post('/e-four/concepts', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const contactChannel = req.session.data['concepts']
+
+  if (contactChannel === 'concept-1') {
+    res.redirect('/e-four/your-benefit-information')
+  }
+
+  else  {
+    res.redirect('/e-four/concept-2/start')
   }
 
 
