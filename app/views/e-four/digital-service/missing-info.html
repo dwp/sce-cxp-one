@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-What information do you need is missing from this page?
+What information you need is missing from this concept?
 {% endblock %}
 
 
@@ -39,7 +39,7 @@ What information do you need is missing from this page?
 
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                     <h1 class="govuk-fieldset__heading">
-                      What information do you need is missing from this page?
+                      What information you need is missing from this concept?
                     </h1>
               </legend>
 
@@ -48,14 +48,26 @@ What information do you need is missing from this page?
               <div class="govuk-radios">
 
                 <div class="govuk-radios__item govuk-!-padding-bottom-3">
+                  <input class="govuk-radios__input" id="contact-channel-2" name="contact-channel" type="radio" value="dla-service" aria-describedby="contact-channel-2-item-hint">
+                  <label class="govuk-label govuk-radios__label" for="contact-channel-2">
+                    Information about another benefit
+                  </label>
+                  <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                    I now need information on another benefit I am claiming and relevant information
+                  </div>
+                </div>
+
+
+                <div class="govuk-radios__item govuk-!-padding-bottom-3">
                   <input class="govuk-radios__input" id="contact-channel-2" name="contact-channel" type="radio" value="govuk" aria-describedby="contact-channel-2-item-hint">
                   <label class="govuk-label govuk-radios__label" for="contact-channel-2">
                     More payment information about my benefits
                   </label>
                   <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                    I have not been able to find the payment information I need.
+                    I have not been able to find the payment information I need
                   </div>
                 </div>
+
 
                 <div class="govuk-radios__item govuk-!-padding-bottom-3">
                   <input class="govuk-radios__input" id="contact-channel-2" name="contact-channel" type="radio" value="esa-service" aria-describedby="contact-channel-2-item-hint">
@@ -63,17 +75,7 @@ What information do you need is missing from this page?
                     Other information related to me and my benefits
                   </label>
                   <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                    I need to understand additional details not related to payments.
-                  </div>
-                </div>
-
-                <div class="govuk-radios__item govuk-!-padding-bottom-3">
-                  <input class="govuk-radios__input" id="contact-channel-2" name="contact-channel" type="radio" value="dla-service" aria-describedby="contact-channel-2-item-hint">
-                  <label class="govuk-label govuk-radios__label" for="contact-channel-2">
-                    Information about another benefit
-                  </label>
-                  <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                    I now need information on another benefit I am claiming and their information.
+                    I need to understand additional details not related to payments
                   </div>
                 </div>
 
@@ -83,7 +85,7 @@ What information do you need is missing from this page?
                     No other information needed
                   </label>
                   <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                     I have found all the information I need.
+                     I have found all the information I need
                   </div>
                 </div>
 
@@ -104,11 +106,10 @@ What information do you need is missing from this page?
                     I would like to talk to an adviser by phone
                   </label>
                   <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                    I like talking to an DWP adviser to get any information. I don't trust online information. 
+                    I like talking to an DWP adviser to get any information
                   </div>
                 </div>
               </div>
-
             </fieldset>
         </div>
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
