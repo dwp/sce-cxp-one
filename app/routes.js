@@ -346,3 +346,31 @@ router.post('/e-five/concepts', function (req, res) {
 
 
 })
+
+router.post('/e-five/information-channels', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const contactChannel = req.session.data['contact-channel']
+
+  if (contactChannel === 'telephone') {
+    res.redirect('/e-five/concept-2/telephone-information')
+  }
+
+  else if (contactChannel === 'dss-signin') {
+    res.redirect('/e-five/concept-2/ni-number')
+  }
+
+  else if (contactChannel === 'chat-bots') {
+    res.redirect('/e-five/concept-2/webchat-service')
+  }
+
+    else if (contactChannel === 'no-i-did-not-found-info') {
+      res.redirect('/e-five/concept-2/did-you-get-all-info-no')
+    }
+    else if (contactChannel === 'no-i-do-not') {
+      res.redirect('/e-five/concept-2/thank-you-close')
+    }
+
+})
